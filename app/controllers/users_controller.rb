@@ -1,25 +1,12 @@
 class UsersController < ApplicationController
-# app/controllers/users_controller.rb
-  def new
-    @user = User.new
-  end
-
-  def create
-    @user = User.new(user_params)
-    if @user.save
-      redirect_to @user
-    else
-      render :new
-    end
-  end
+  before_action :authenticate_user!
 
   def show
     @user = User.find(params[:id])
   end
 
-  private
-
-  def user_params
-    params.require(:user).permit(:email, :host)
+  def show_current_user_profile
+    @user = current_user
+    render 'show'
   end
 end

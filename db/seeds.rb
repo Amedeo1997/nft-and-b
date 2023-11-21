@@ -33,7 +33,7 @@ alexandra = User.create!(
 )
 
 # user4
-nicola = User.create!(
+nicolas = User.create!(
   email: 'Nicola@example.com',
   password: 'password123',
   host: true
@@ -41,33 +41,44 @@ nicola = User.create!(
 
 # product1
 Product.create!(
-  name: "Product 1",
-  category: "category",
+  name: "Discreet Landscapes",
+  category: "Music",
   price: 15.50,
-  description: "Description for Product 1",
+  description: "Discreet Landscapes is a collection of digitally created artworks exploring the natural world through an imagined and utopic lens",
   availability: true,
-  image: "product_1.jpg",
-  user_id: nicola.id
+  image: "01.png",
+  user_id: nicolas.id
 )
 
 # product2
 Product.create!(
-  name: "Product 2",
-  category: "category",
+  name: "Skyborne - Genesis",
+  category: "Photography",
   price: 35.50,
-  description: "Description for Product 2",
+  description: "Each Genesis Immortal comes equipped with powerful traits, enhancing their abilities and making them valuable assets in the world of Skyborne Legacy.",
   availability: true,
-  image: "product_2.jpg",
+  image: "02.png",
   user_id: ahmed.id
 )
 
 # product3
 Product.create!(
-  name: "Product 3",
-  category: "category",
+  name: "Zero Gravity",
+  category: "Gaming",
   price: 65.50,
-  description: "Description for Product 3",
+  description: "In the weightless environment of space, a unique form of sculpture art emerges, using paint as a medium to create sculptures",
   availability: true,
-  image: "product_3.jpg",
+  image: "03.png",
+  user_id: alexandra.id
+)
+
+# product4
+Product.create!(
+  name: "Super Champs",
+  category: "Art",
+  price: 65.50,
+  description: "Something which has more than one possible meaning and therefore possibly causes confusion",
+  availability: true,
+  image: "04.png",
   user_id: alexandra.id
 )
