@@ -1,6 +1,7 @@
 .card-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .card {
@@ -11,6 +12,7 @@
   transition-property: transform;
   transition-timing-function: ease-in-out;
   transition-duration: 250ms;
+  height: 480px;
 }
 
 .card img {
@@ -26,4 +28,8 @@
   border: 1px solid $blue;
   border-radius: 20px;
   transform: translateY(-20px);;
+}
+
+.noHover{
+  pointer-events: none;
 }
