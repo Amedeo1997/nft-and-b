@@ -82,3 +82,47 @@ Product.create!(
   image: "04.png",
   user_id: alexandra.id
 )
+
+# product()
+Product.create!(
+  name: "Discreet Landscapes",
+  category: "Music",
+  price: 15.50,
+  description: "Discreet Landscapes is a collection of digitally created artworks exploring the natural world through an imagined and utopic lens",
+  availability: true,
+  image: "05.png",
+  user_id: nicolas.id
+)
+
+# product6
+Product.create!(
+  name: "Skyborne - Genesis",
+  category: "Photography",
+  price: 35.50,
+  description: "Each Genesis Immortal comes equipped with powerful traits, enhancing their abilities and making them valuable assets in the world of Skyborne Legacy.",
+  availability: true,
+  image: "06.png",
+  user_id: ahmed.id
+)
+
+# product7
+Product.create!(
+  name: "Zero Gravity",
+  category: "Gaming",
+  price: 65.50,
+  description: "In the weightless environment of space, a unique form of sculpture art emerges, using paint as a medium to create sculptures",
+  availability: true,
+  image: "07.png",
+  user_id: alexandra.id
+)
+
+# product8
+Product.create!(
+  name: "Super Champs",
+  category: "Art",
+  price: 65.50,
+  description: "Something which has more than one possible meaning and therefore possibly causes confusion",
+  availability: true,
+  image: "08.png",
+  user_id: alexandra.id
+)
