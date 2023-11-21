@@ -1,0 +1,5 @@
+<% @products.each do |product| %>
+  <li>
+    <p>Your Product: <%= link_to product.name.capitalize, product_path(product) %></p>
+  </li>
+<% end %>
