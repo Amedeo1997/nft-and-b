@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
   resources :products
-
+  get 'my_profile', to: 'users#show_current_user_profile'
   resources :users, only: [:new, :create, :show]
 
 

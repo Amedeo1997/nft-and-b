@@ -1,6 +1,12 @@
 class UsersController < ApplicationController
-# app/controllers/users_controller.rb
+  before_action :authenticate_user!
+
   def show
     @user = User.find(params[:id])
+  end
+
+  def show_current_user_profile
+    @user = current_user
+    render 'show'
   end
 end
