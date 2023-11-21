@@ -38,12 +38,12 @@
 <h1 id="main_title">Bring the <span>BEST NFTs</span> at home in one clic</h1>
 
 <div class="btn-container">
-<%= link_to "Get this NFT now", root_path, class: "button-primary" %>
+<%= link_to "Browse our NFT library", products_path, class: "button-primary" %>
 </div>
 
 <% @products.each do |product| %>
   <div class="card-container">
-  <div class="card">
+  <div class="card noHover">
     <div class="tag">
       <p><span><%= product.price %>€</span>/mo</p>
     </div>
