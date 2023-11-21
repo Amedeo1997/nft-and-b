@@ -46,7 +46,7 @@ Product.create!(
   price: 15.50,
   description: "Discreet Landscapes is a collection of digitally created artworks exploring the natural world through an imagined and utopic lens",
   availability: true,
-  image: "../app/assets/images/01.png",
+  image: "01.png",
   user_id: nicolas.id
 )
 
@@ -57,7 +57,7 @@ Product.create!(
   price: 35.50,
   description: "Each Genesis Immortal comes equipped with powerful traits, enhancing their abilities and making them valuable assets in the world of Skyborne Legacy.",
   availability: true,
-  image: "../app/assets/images/02.png",
+  image: "02.png",
   user_id: ahmed.id
 )
 
@@ -68,7 +68,7 @@ Product.create!(
   price: 65.50,
   description: "In the weightless environment of space, a unique form of sculpture art emerges, using paint as a medium to create sculptures",
   availability: true,
-  image: "../app/assets/images/03.png",
+  image: "03.png",
   user_id: alexandra.id
 )
 
@@ -79,6 +79,6 @@ Product.create!(
   price: 65.50,
   description: "Something which has more than one possible meaning and therefore possibly causes confusion",
   availability: true,
-  image: "../app/assets/images/04.png",
+  image: "04.png",
   user_id: alexandra.id
 )
