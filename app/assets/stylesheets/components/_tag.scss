@@ -1,0 +1,20 @@
+.tag {
+  background-color: $blue;
+  position: absolute;
+  top: 266px;
+  z-index: 999;
+  right: -20px;
+  margin-right: 40px;
+  padding: 10px 0px 0px 0px;
+  border-radius: 9px;
+  text-align: center;
+}
+
+.tag p {
+  font-size: 16px;
+  color: white;
+}
+
+.tag p span {
+  font-weight: bold;
+}

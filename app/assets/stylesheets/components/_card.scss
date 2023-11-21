@@ -1,0 +1,30 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.card {
+  width: 302px;
+  background-color: $grey-card;
+  border-radius: 20px;
+
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 250ms;
+}
+
+.card img {
+  width: 288px;
+  height: 288px;
+  border-radius: 14px;
+  margin: 6px;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  background-color: $light-blue;
+  border: 1px solid $blue;
+  border-radius: 20px;
+  transform: translateY(-20px);;
+}
