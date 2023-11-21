@@ -1,0 +1,11 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 302px;
+  height: 409px;
+  background-color: $grey-card;
+  border-radius: 20px;
+}
