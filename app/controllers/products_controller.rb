@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show]
+  skip_before_action :authenticate_user!, only: [:index]
 
   def index
     @products = Product.all
@@ -15,8 +16,12 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-    @product.save
-    redirect_to products_path(@product)
+    @product.user_id = current_user.id
+    if @product.save
+      redirect_to products_path(@product)
+    else
+      render :new
+    end
   end
 
 private
