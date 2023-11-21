@@ -4,8 +4,8 @@
 <%= link_to "Browse our NFT library", products_path, class: "button-primary" %>
 </div>
 
-<% @products.each do |product| %>
-  <div class="card-container">
+<% @products[0..3].each do |product| %>
+    <div class="card-container">
   <div class="card noHover">
     <div class="tag">
       <p><span><%= product.price %>€</span>/mo</p>
@@ -13,5 +13,5 @@
     <%= image_tag(product.image) %>
     <h2><%= product.name %></h2>
     <p><%= product.description %></p>
-  </div>
+  <% end %>
 <% end %>
