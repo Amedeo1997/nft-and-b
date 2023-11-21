@@ -41,17 +41,14 @@
 <%= link_to "Get this NFT now", root_path, class: "button-primary" %>
 </div>
 
-<div class="card-container">
+<% @products.each do |product| %>
+  <div class="card-container">
   <div class="card">
     <div class="tag">
-      <p><span>300€</span>/mo</p>
+      <p><span><%= product.price %>€</span>/mo</p>
     </div>
-    <%= image_tag("08.png", :alt => "rss feed") %>
-    <h2>Lorem ipsum</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sodales semper arcu, et volutpat lacus aliquet sed curabitur mi</p>
+    <%# <%= image_tag(product.image, :alt => "cover card") %>
+    <h2><%= product.name %></h2>
+    <p><%= product.description %></p>
   </div>
-
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to "Create New Product", new_product_path%>
-
+<% end %>
