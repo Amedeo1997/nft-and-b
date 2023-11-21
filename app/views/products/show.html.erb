@@ -1,0 +1,11 @@
+<%# <h1>can we see the code</h1>
+<ul>
+<li><%= %>
+
+<h1><%= @product.name %></h1>
+
+<p><strong>Category:</strong> <%= @product.category %></p>
+
+<div>
+  <%= image_tag(@product.image, :alt => "image") %>
+<%= link_to 'Back', products_path %>
