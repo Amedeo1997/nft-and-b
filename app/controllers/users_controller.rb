@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @reservation = Reservation.find(params[:id])
+    @product = Product.find(params[:product_id])
   end
 
   def show_current_user_profile
