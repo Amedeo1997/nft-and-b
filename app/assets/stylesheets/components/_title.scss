@@ -24,10 +24,25 @@ h2 {
   padding: 10px 20px;
 }
 
+h3 {
+  font-size: 40px;
+  font-family: "Changa One";
+  color: white;
+  padding: 10px 20px;
+}
+
 p {
   font-size: 12px;
   font-family: "Poppins";
   padding: 0px 20px;
+}
+
+#product-paragraph {
+  text-align: left;
+  padding: 0;
+  width: 700px;
+  line-height: 2;
+  margin-top: 60px;
 }
 
 .nav-link {
@@ -35,4 +50,8 @@ p {
   font-size: 14px;
   font-family: "Poppins";
   margin-right: 20px;
+}
+
+#product-title {
+  text-align: left;
 }
