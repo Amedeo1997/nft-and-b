@@ -13,3 +13,31 @@
   font-family: "Poppins";
   font-size: 20px;
 }
+
+.button-category {
+  border-radius: 4px;
+  padding: 10px 40px;
+  background-color: $grey-card;
+  text-decoration: none;
+  color: $blue;
+  font-family: "Poppins";
+  font-size: 14px;
+}
+
+.button-category:hover {
+  border-radius: 4px;
+  padding: 10px 40px;
+  background-color: $light-blue;
+  text-decoration: none;
+  color: white;
+  border: 1px solid $blue;
+  font-family: "Poppins";
+  font-size: 14px;
+}
+
+.category-container {
+  align-items: center;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 65px;
+}
