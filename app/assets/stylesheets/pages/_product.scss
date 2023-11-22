@@ -1,0 +1,61 @@
+.container-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Adjust height as needed */
+  background-color: $light-blue;
+  border-radius: 5px;
+  margin: 30px;
+  box-shadow: $blue 0px 0px 10px;
+}
+
+.left-product {
+  /* Imposta le dimensioni desiderate per il contenitore */
+  width: 300px; /* Larghezza desiderata */
+  height: 200px; /* Altezza desiderata */
+  position: absolute; /* Per posizionare correttamente l'immagine all'interno */
+  top: 80px;
+  left: 20px;
+  box-shadow: black 0px 0px 10px;
+
+  /* Stile per l'immagine all'interno del contenitore */
+  .product-image {
+    width: 100%; /* L'immagine si adatta alla larghezza del suo contenitore */
+    height: 100%; /* L'immagine si adatta all'altezza del suo contenitore */
+    object-fit: cover; /* L'immagine viene ridimensionata per coprire l'intero contenitore */
+    position: absolute; /* Posiziona l'immagine all'interno del contenitore */
+    top: 0; /* Posiziona l'immagine in alto */
+    left: 0; /* Posiziona l'immagine a sinistra */
+    border-radius: 5px;
+  }
+  .product-price {
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    background-color: $blue;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+  }
+}
+
+
+.right-product {
+  width: 80%; /* Larghezza desiderata per il contenitore */
+  margin: 0 auto; /* Imposta il margine automatico per centrare il contenuto */
+  text-align: center; /* Centra il testo all'interno del div */
+  padding-left: 200px;
+
+  /* Stile per il paragrafo */
+  p {
+    margin-top: 20px; /* Aggiunge spazio sopra il paragrafo (modifica secondo necessità) */
+  }
+  h1 {
+    margin-bottom: 20px; /* Aggiunge spazio sopra il paragrafo (modifica secondo necessità) */
+  }
+}
+
+.suggestion {
+  text-align: center;
+  height: 200px;
+}
