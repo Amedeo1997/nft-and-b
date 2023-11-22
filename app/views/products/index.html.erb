@@ -14,6 +14,7 @@
 
 <div class="card-container">
   <% @products.each do |product| %>
+    <%= link_to product_path(product), class: "override" do %>
       <div class="card">
         <div class="tag">
           <p><span><%= product.price %>€</span>/mo</p>
@@ -24,6 +25,7 @@
         <p><%= product.description %></p>
         </div>
       </div>
+    <% end %>
   <% end %>
 </div>
 
