@@ -1,7 +1,39 @@
+<div class="container-product">
+<div class="left-product">
+  <%= image_tag(@product.image, :alt => "nft", class: "product-image") %>
+  <p class= "product-price"><%= @product.price %>€/mo</p>
+</div>
+
+
+<div class= "right-product">
 <h1><%= @product.name %></h1>
+<%= link_to "Get this NFT now", products_path, class: "button-primary" %>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore optio obcaecati ducimus dolores aliquid? Dolores, earum ab sint voluptatum vitae, ut, corrupti minima autem facilis officia nemo ipsam eveniet porro? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, neque. Debitis, minima! Accusamus deserunt mollitia ut odit, sequi, dicta adipisci incidunt ipsa, ullam earum ex iure alias corrupti distinctio error!<br>
+<br>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam in eius expedita omnis, impedit libero excepturi iusto autem consequatur quas laborum, tenetur tempore neque facilis. Eaque blanditiis possimus dignissimos illum.</p>
+</div>
+</div>
 
-<p><strong>Category:</strong> <%= @product.category %></p>
+<div class= "suggestion">
+<h2>Need more?</h2>
+</div>
 
-<div>
-  <%= image_tag(@product.image, :alt => "image") %>
-<%= link_to 'Back', products_path %>
+  <div class="card-container">
+
+<% @suggestion[0..3].each do |product| %>
+    <div class="card noHover">
+      <div class="tag">
+        <p><span><%= product.price %>€</span>/mo</p>
+      </div>
+      <%= image_tag(product.image) %>
+      <h2><%= product.name %></h2>
+      <p><%= product.description %></p>
+    </div>
+<% end %>
+  </div>
+
+
+
+
+
+<%= link_to 'Back to products', products_path %>
