@@ -1,5 +1,5 @@
 <div class="category-container">
-  <a href="" class= "button-category">All</a>
+  <a href="" class= "button-category autofocus">All</a>
   <a href="" class= "button-category">Art</a>
   <a href="" class= "button-category">Entertainment</a>
   <a href="" class= "button-category">Movie</a>
@@ -9,6 +9,7 @@
 
 <div class="card-container">
   <% @products.each do |product| %>
+    <%= link_to product_path(product), class: "override" do %>
       <div class="card">
         <div class="tag">
           <p><span><%= product.price %>€</span>/mo</p>
@@ -19,7 +20,8 @@
         <p><%= product.description %></p>
         </div>
       </div>
+    <% end %>
   <% end %>
 </div>
 
-<%= link_to 'Back', root_path %>
+<%= link_to 'Home', root_path %>
