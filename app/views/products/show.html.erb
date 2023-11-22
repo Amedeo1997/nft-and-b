@@ -2,4 +2,6 @@
 <p><strong>Category:</strong> <%= @product.category %></p>
 <div>
   <%= image_tag(@product.image, :alt => "image") %>
+<%= link_to 'Reserve This Product', new_product_reservation_path(product_id: @product.id) %>
+<br>
 <%= link_to 'All Products', products_path %>

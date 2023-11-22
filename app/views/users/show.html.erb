@@ -1,4 +1,11 @@
-<h1>User informations</h1>
+<h1>User Information</h1>
 <p>Email: <%= @user.email %></p>
 <p>Host: <%= @user.host %></p>
-<%= link_to 'Your Reservations', reservations_path %>
+
+<h3>Your Reservations</h3>
+
+<% @user.reservations.each do |reservation| %>
+  <p>
+    <%= "Reservation from #{reservation.start_date} until #{reservation.end_date}" %>
+  </p>
+<% end %>
