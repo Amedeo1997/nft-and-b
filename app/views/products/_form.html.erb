@@ -1,7 +1,7 @@
 <%= simple_form_for(@product) do |f| %>
   <%= f.input :name %>
   <%= f.input :image %>
-  <%= f.input :category %>
+ <%= f.input :category, collection: ['Art', 'Entertainment', 'Movie', 'Gaming', 'Collections'], prompt: 'Choose one category' %>
   <%= f.input :price %>
   <%= f.button :submit %>
 <% end %>
