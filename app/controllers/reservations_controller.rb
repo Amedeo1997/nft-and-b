@@ -12,7 +12,7 @@ class ReservationsController < ApplicationController
     @reservation.user = current_user
     @reservation.product = Product.find(params[:product_id])
     if @reservation.save
-      redirect_to @product
+      redirect_to my_profile_path(@user)
     else
       render :new
     end
