@@ -29,7 +29,7 @@
   <div class="card-container">
 
 <% @suggestion[0..3].each do |product| %>
-    <div class="card noHover">
+    <div class="card">
       <div class="tag">
         <p><span><%= product.price %>€</span>/mo</p>
       </div>
@@ -45,4 +45,3 @@
 
 
 <%= link_to 'Back to products', products_path %>
-
