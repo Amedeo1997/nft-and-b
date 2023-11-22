@@ -1,6 +1,25 @@
-<% @products.each do |product| %>
-  <li>
-    <%= link_to product.name.capitalize, product_path(product) %>
-  </li>
-<% end %>
-<%= link_to 'Home', root_path %>
+<div class="category-container">
+  <a href="" class= "button-category autofocus">All</a>
+  <a href="" class= "button-category">Art</a>
+  <a href="" class= "button-category">Entertainment</a>
+  <a href="" class= "button-category">Movie</a>
+  <a href="" class= "button-category">Gaming</a>
+  <a href="" class= "button-category">Collections</a>
+</div>
+
+<div class="card-container">
+  <% @products.each do |product| %>
+    <%= link_to product_path(product), class: "override" do %>
+      <div class="card">
+        <div class="tag">
+          <p><span><%= product.price %>€</span>/mo</p>
+        </div>
+        <div>
+        <%= image_tag(product.image) %>
+        <h2><%= product.name %></h2>
+        <p><%= product.description %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
