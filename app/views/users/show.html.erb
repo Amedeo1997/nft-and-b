@@ -1,11 +1,10 @@
 <h1>User Information</h1>
 <p>Email: <%= @user.email %></p>
-<p>Host: <%= @user.host %></p>
-
 <h3>Your Reservations</h3>
 
 <% @user.reservations.each do |reservation| %>
   <p>
+    <%= image_tag(reservation.product.image, width: 100, height: 200) %>
     <%= "Reservation from #{reservation.start_date} until #{reservation.end_date}" %>
   </p>
 <% end %>
