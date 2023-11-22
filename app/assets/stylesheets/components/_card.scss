@@ -7,6 +7,12 @@
   grid-row-gap: 10px;
 }
 
+.card-container-home {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
 .card {
   width: 302px;
   background-color: $grey-card;
