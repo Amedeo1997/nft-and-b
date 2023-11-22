@@ -1,3 +1,8 @@
+<% @products.each do |product| %>
+  <li>
+    <%= link_to product.name.capitalize, product_path(product) %>
+  </li>
+<% end %>
 <div class="category-container">
   <a href="" class= "button-category">All</a>
   <a href="" class= "button-category">Art</a>
@@ -22,4 +27,4 @@
   <% end %>
 </div>
 
-<%= link_to 'Back', root_path %>
+<%= link_to 'Home', root_path %>

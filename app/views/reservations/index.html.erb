@@ -1,0 +1,7 @@
+All Your Reservations
+<% @reservations.each do |reservation| %>
+  <li>
+    <%= reservation.start_date %> / <%= reservation.end_date %></p>
+  </li>
+<% end %>
+<%= link_to 'Back', products_path %>
