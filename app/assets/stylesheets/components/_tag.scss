@@ -1,11 +1,11 @@
 .tag {
   background-color: $blue;
   position: absolute;
-  top: 266px;
+  top: 261px;
   z-index: 999;
   right: -20px;
   margin-right: 40px;
-  padding: 10px 0px 0px 0px;
+  padding: 15px 0px 0px 0px;
   border-radius: 9px;
   text-align: center;
 }
@@ -17,4 +17,10 @@
 
 .tag p span {
   font-weight: bold;
+}
+
+.tag-product-position {
+  left: 544px;
+  top: 203px;
+  width: 150px;
 }
