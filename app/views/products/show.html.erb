@@ -40,7 +40,11 @@
 <% end %>
   </div>
 
-
+<div>
+<%= link_to 'Reserve This Product', new_product_reservation_path(product_id: @product.id) %>
+<br>
+<%= link_to 'All Products', products_path %>
+</div>
 
 
 
