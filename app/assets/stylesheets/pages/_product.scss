@@ -17,14 +17,8 @@
   width: 300px; /* Larghezza desiderata */
   height: 200px; /* Altezza desiderata */
   position: absolute; /* Per posizionare correttamente l'immagine all'interno */
-<<<<<<< HEAD
   top: 80px;
   left: 20px;
-=======
-  top: 0;
-  left: 0;
-  box-shadow: black 0px 0px 10px;
->>>>>>> 921fbfe98b0ea00bad73caa2c0dc7b4c76b640b9
 
   /* Stile per l'immagine all'interno del contenitore */
   .product-image {
@@ -32,7 +26,7 @@
     height: 420px; /* L'immagine si adatta all'altezza del suo contenitore */
     object-fit: cover; /* L'immagine viene ridimensionata per coprire l'intero contenitore */
     position: absolute; /* Posiziona l'immagine all'interno del contenitore */
-    top: 180px; /* Posiziona l'immagine in alto */
+    top: 100px; /* Posiziona l'immagine in alto */
     left: 160px; /* Posiziona l'immagine a sinistra */
     border-radius: 10px;
   }
