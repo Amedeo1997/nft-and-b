@@ -3,9 +3,8 @@
 <h3>Your Reservations</h3>
 
 <% @reservations.each do |reservation| %>
-    <%= puts "Reservations: #{reservations}" %>
-
-    <%= puts "Each reservation: #{reservations}" %>
+    <%= puts "Reservations: #{@reservations}" %>
+    <%= puts "Each reservation: #{reservation}" %>
 
     <%= "Reservation #{reservation.start_date} until #{reservation.end_date}" %>
     <br>
@@ -19,3 +18,5 @@
     <%= link_to 'Reject', reject_product_reservation_path(reservation.product, reservation), data: {turbo_method: :post} %>
     <br>
 <% end %>
+
+<h3>Your Creations</h3>
