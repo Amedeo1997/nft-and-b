@@ -27,6 +27,8 @@
 }
 
 .button-secondary {
+  display: block;
+  width: 100%;
   border-radius: 9px;
   padding: 10px 104px;
   text-decoration: none;
@@ -38,6 +40,8 @@
 }
 
 .button-secondary:hover {
+  display: block;
+  width: 100%;
   border-radius: 9px;
   padding: 10px 104px;
   text-decoration: none;
@@ -73,4 +77,13 @@
   margin-top: 150px;
   margin-bottom: 50px;
   text-align: center;
+}
+
+.button-forgot-password {
+  text-decoration: none;
+}
+
+.button-forgot-password:hover {
+  text-decoration: none;
+  color: white;
 }
