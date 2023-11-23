@@ -18,11 +18,34 @@
   margin-top: 375px auto;
   border-radius: 9px;
   padding: 10px 40px;
-  background-color: $green-hover;
+  background-color: transparent;
   text-decoration: none;
   color: white;
   font-family: "Poppins";
   font-size: 20px;
+  border: 1px solid ;
+}
+
+.button-primary-small {
+  margin-top: 375px auto;
+  border-radius: 9px;
+  padding: 10px 40px;
+  background-color: $green;
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins";
+  font-size: 14px;
+}
+
+.button-primary-small:hover {
+  margin-top: 375px auto;
+  border-radius: 9px;
+  padding: 10px 40px;
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins";
+  font-size: 14px;
   border: 1px solid ;
 }
 
@@ -86,5 +109,10 @@
 .button-forgot-password:hover {
   text-decoration: none;
   color: white;
+}
+
+
+.button-fixed-width {
+  display: inline-grid;
 }
 
