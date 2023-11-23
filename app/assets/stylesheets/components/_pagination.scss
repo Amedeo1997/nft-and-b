@@ -1,0 +1,17 @@
+.pagination {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.pagination a, .pagination span {
+  padding: 5px 10px;
+  margin: 0 2px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: #333;
+}
+
+.pagination .current {
+  background-color: #007bff;
+  color: #fff;
+}
