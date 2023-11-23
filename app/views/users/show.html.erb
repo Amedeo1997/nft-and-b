@@ -2,17 +2,23 @@
 <h3>Your Reservations</h3>
 
 <% @reservations.each do |reservation| %>
-    <%= "Reservation #{reservation.start_date} until #{reservation.end_date}" %>
-    <br>
-    <%= image_tag(reservation.product.image, width: 100, height: 200) %>
-    <br>
-    <h2>Reservation Details</h2>
-    <h5>Status: <strong><%= reservation.status || 'Pending' %></strong></h5>
-    <br>
-    <%= link_to 'Accept', accept_product_reservation_path(reservation.product, reservation), data: {turbo_method: :post} %>
-    <br>
-    <%= link_to 'Reject', reject_product_reservation_path(reservation.product, reservation), data: {turbo_method: :post} %>
-    <br>
+  <%= "Reservation #{reservation.start_date} until #{reservation.end_date}" %>
+  <br>
+  <%= image_tag(reservation.product.image, width: 100, height: 200) %>
+  <br>
+  <h2>Reservation Details</h2>
+  <h5>Status: <strong><%= reservation.status || 'Pending' %></strong></h5>
+  <br>
 <% end %>
 
+<h3>reservations to accept</h3>
 <% @reservations_as_host.each do |host| %>
+  <br>
+  <h2><%= host.product.name %></h2>
+  <h5>Status: <strong><%= host.status || 'Pending' %></strong></h5>
+  <br>
+  <%= link_to 'Accept', accept_product_reservation_path(host.product, host), data: {turbo_method: :post} %>
+  <br>
+  <%= link_to 'Reject', reject_product_reservation_path(host.product, host), data: {turbo_method: :post} %>
+  <br>
+<% end %>
