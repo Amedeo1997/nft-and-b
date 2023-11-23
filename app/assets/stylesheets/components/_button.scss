@@ -14,6 +14,40 @@
   font-size: 20px;
 }
 
+.button-primary:hover {
+  margin-top: 375px auto;
+  border-radius: 9px;
+  padding: 10px 40px;
+  background-color: $green-hover;
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins";
+  font-size: 20px;
+  border: 1px solid ;
+}
+
+.button-secondary {
+  border-radius: 9px;
+  padding: 10px 104px;
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins";
+  font-size: 20px;
+  background-color: $light-blue;
+  border: 1px solid $blue;
+}
+
+.button-secondary:hover {
+  border-radius: 9px;
+  padding: 10px 104px;
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins";
+  font-size: 20px;
+  background-color: $grey-card;
+  border: 1px solid white;
+}
+
 .button-category {
   border-radius: 4px;
   padding: 10px 40px;
