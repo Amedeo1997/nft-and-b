@@ -1,6 +1,7 @@
 .pagination {
   margin-top: 15px;
-  text-align: center;
+  text-align: right;
+  padding-left: 500px;
 }
 
 .pagination a, .pagination span {
@@ -12,6 +13,6 @@
 }
 
 .pagination .current {
-  background-color: #007bff;
+  background-color: $blue;
   color: #fff;
 }
