@@ -1,9 +1,15 @@
-<%= simple_form_for(@product) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :image %>
- <%= f.input :category, collection: ['Art', 'Entertainment', 'Movie', 'Gaming', 'Collections'], prompt: 'Choose one category' %>
-  <%= f.input :price %>
-   <%= f.input :description %>
-  <%= f.button :submit %>
-<% end %>
-<%# make into img in schema %>
+<div class="form-container">
+  <h2 id="login-title" >Create your NFT</h2>
+  <%= simple_form_for(@product) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :image %>
+  <%= f.input :category, collection: ['Art', 'Entertainment', 'Movie', 'Gaming', 'Collections'], prompt: 'Choose one category' %>
+    <%= f.input :price %>
+    <%= f.input :description %>
+
+    <div class="form-actions">
+      <%= f.button :submit, class: "button-primary" %>
+    </div>
+  <% end %>
+  <%# make into img in schema %>
+</div>
