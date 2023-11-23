@@ -1,4 +1,4 @@
-<h1>Hello, #{"user.username"} and Welcome to Your Profile</h1>
+<h1>Hello, and Welcome to Your Profile</h1>
 <h3>Your Reservations</h3>
 
 <% @reservations.each do |reservation| %>
@@ -14,3 +14,5 @@
     <%= link_to 'Reject', reject_product_reservation_path(reservation.product, reservation), data: {turbo_method: :post} %>
     <br>
 <% end %>
+
+<% @reservations_as_host.each do |host| %>

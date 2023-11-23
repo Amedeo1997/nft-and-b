@@ -19,6 +19,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     @product.user_id = current_user.id
     if @product.save
+      current_user.update(host: true)
       redirect_to products_path(@product)
     else
       render :new
