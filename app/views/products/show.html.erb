@@ -10,7 +10,7 @@
 
 <div class= "right-product">
   <h1 id="product-title"><%= @product.name %></h1>
-  <%= link_to "Get this NFT now", products_path, class: "button-primary" %>
+  <%= link_to "Get this NFT now", new_product_reservation_path(product_id: @product.id), class: "button-primary" %>
   <p id="product-paragraph">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore optio obcaecati ducimus dolores aliquid? Dolores, earum ab sint voluptatum vitae, ut, corrupti minima autem facilis officia nemo ipsam eveniet porro? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, neque. Debitis, minima! Accusamus deserunt mollitia ut odit, sequi, dicta adipisci incidunt ipsa, ullam earum ex iure alias corrupti distinctio error!<br>
     <br>
@@ -39,13 +39,3 @@
     </div>
 <% end %>
   </div>
-
-<div>
-<%= link_to 'Reserve This Product', new_product_reservation_path(product_id: @product.id) %>
-<br>
-<%= link_to 'All Products', products_path %>
-</div>
-
-
-
-<%= link_to 'Back to products', products_path %>
