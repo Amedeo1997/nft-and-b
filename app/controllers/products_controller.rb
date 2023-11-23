@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   def index
     @categories = Product.pluck(:category).uniq
     @selected_category = params[:category]
-    @products = filtered_products
+    @products = filtered_products.paginate(page: params[:page], per_page: 8)
   end
 
   def show
