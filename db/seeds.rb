@@ -13,6 +13,7 @@ User.destroy_all
 
 # user1
 User.create!(
+  username: 'user1',
   email: 'user1@example.com',
   password: 'password123',
   host: true
@@ -20,6 +21,7 @@ User.create!(
 
 # user2
 ahmed = User.create!(
+  username: 'Amedeo97',
   email: 'Ahmed@example.com',
   password: 'password123',
   host: true
@@ -27,6 +29,7 @@ ahmed = User.create!(
 
 # user3
 alexandra = User.create!(
+  username: 'AustralianGirl',
   email: 'Alexandra@example.com',
   password: 'password123',
   host: true
@@ -34,6 +37,7 @@ alexandra = User.create!(
 
 # user4
 nicolas = User.create!(
+  username: 'Nico1234',
   email: 'Nicola@example.com',
   password: 'password123',
   host: true
