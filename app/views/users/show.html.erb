@@ -1,5 +1,8 @@
+<h1>Hello, and Welcome to Your Profile</h1>
+
 <h1>Hello, <%= @user.username.capitalize %></h1>
 <h2></h2>
+
 <h3>Your Reservations</h3>
 
 <% @reservations.each do |reservation| %>
@@ -19,4 +22,8 @@
     <br>
 <% end %>
 
+
+<% @reservations_as_host.each do |host| %>
+=======
 <h3>Your Creations</h3>
+
