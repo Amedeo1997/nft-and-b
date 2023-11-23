@@ -76,6 +76,9 @@
 }
 
 .button-category {
+  text-align: center;
+  display: inline-block;
+  // width: 100%;
   border-radius: 4px;
   padding: 10px 40px;
   background-color: $grey-card;
@@ -83,6 +86,7 @@
   color: $blue;
   font-family: "Poppins";
   font-size: 14px;
+  overflow: hidden;
 }
 
 .button-category:hover {
@@ -111,8 +115,33 @@
   color: white;
 }
 
-
 .button-fixed-width {
   display: inline-grid;
 }
 
+.btn-status-container {
+  display: flex;
+  margin: 20px;
+}
+
+.accept-btn {
+  color: $green;
+  background-color: $green-pale;
+}
+
+.accept-btn:hover {
+  color: white;
+  background-color: $green-pale;
+  border: 1px solid $green;
+}
+
+.reject-btn {
+  color: $red;
+  background-color: $red-pale;
+}
+
+.reject-btn:hover {
+  color: white;
+  background-color: $red-pale;
+  border: 1px solid $red;
+}
