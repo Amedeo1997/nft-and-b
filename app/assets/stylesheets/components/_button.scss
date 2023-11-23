@@ -14,6 +14,67 @@
   font-size: 20px;
 }
 
+.button-primary:hover {
+  margin-top: 375px auto;
+  border-radius: 9px;
+  padding: 10px 40px;
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins";
+  font-size: 20px;
+  border: 1px solid ;
+}
+
+.button-primary-small {
+  margin-top: 375px auto;
+  border-radius: 9px;
+  padding: 10px 40px;
+  background-color: $green;
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins";
+  font-size: 14px;
+}
+
+.button-primary-small:hover {
+  margin-top: 375px auto;
+  border-radius: 9px;
+  padding: 10px 40px;
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins";
+  font-size: 14px;
+  border: 1px solid ;
+}
+
+.button-secondary {
+  display: block;
+  width: 100%;
+  border-radius: 9px;
+  padding: 10px 104px;
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins";
+  font-size: 20px;
+  background-color: $light-blue;
+  border: 1px solid $blue;
+}
+
+.button-secondary:hover {
+  display: block;
+  width: 100%;
+  border-radius: 9px;
+  padding: 10px 104px;
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins";
+  font-size: 20px;
+  background-color: $grey-card;
+  border: 1px solid white;
+}
+
 .button-category {
   border-radius: 4px;
   padding: 10px 40px;
@@ -39,4 +100,17 @@
   margin-top: 150px;
   margin-bottom: 50px;
   text-align: center;
+}
+
+.button-forgot-password {
+  text-decoration: none;
+}
+
+.button-forgot-password:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.button-fixed-width {
+  display: inline-grid;
 }

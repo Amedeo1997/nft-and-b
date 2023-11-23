@@ -1,0 +1,28 @@
+.form-container {
+  width: 500px;
+  margin: 150px auto 0px;
+  padding: 40px;
+  background-color: $light-blue;
+  border: 1px solid $blue;
+  border-radius: 20px;
+}
+
+.form-actions > .button-primary {
+  width: 100%;
+}
+
+.form-container-empty {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.connection-container {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.connection-item-container {
+  margin: 40px;
+}
