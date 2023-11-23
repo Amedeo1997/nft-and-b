@@ -1,7 +1,12 @@
-<h1>Hello, #{"user.username"} and Welcome to Your Profile</h1>
+<h1>Hello, <%= @user.username.capitalize %></h1>
+<h2></h2>
 <h3>Your Reservations</h3>
 
 <% @reservations.each do |reservation| %>
+    <%= puts "Reservations: #{reservations}" %>
+
+    <%= puts "Each reservation: #{reservations}" %>
+
     <%= "Reservation #{reservation.start_date} until #{reservation.end_date}" %>
     <br>
     <%= image_tag(reservation.product.image, width: 100, height: 200) %>
