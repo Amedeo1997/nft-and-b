@@ -1,22 +1,23 @@
 <h1>Hello, <%= @user.username.capitalize %></h1>
-<h2>Your Reservations</h2>
+<h3>Your Reservations</h3>
 
-<% @reservations.each do |reservation| %>
-    <%= puts "Reservations: #{@reservations}" %>
-    <%= puts "Each reservation: #{reservation}" %>
+<div class="card-container-home">
+  <% @reservations.each do |reservation| %>
+    <div class="card">
+      <div class="tag">
+        <p><%= "#{reservation.start_date} to #{reservation.end_date}" %></p>
+      </div>
+      <%= image_tag(reservation.product.image) %>
+      <h2><%= reservation.product.name %></h2>
+      <p>Status: <strong><%= reservation.status || 'Pending' %></strong></p>
+      <div class="btn-status-container">
+        <%= link_to 'Accept', accept_product_reservation_path(reservation.product, reservation), data: {turbo_method: :post}, class: "button-category accept-btn" %>
+        <div id="empty-space"></div>
+        <%= link_to 'Reject', reject_product_reservation_path(reservation.product, reservation), data: {turbo_method: :post}, class: "button-category reject-btn" %>
+      </div>
+    </div>
+  <% end %>
+</div>
 
-    <%= "Reservation #{reservation.start_date} until #{reservation.end_date}" %>
-    <br>
-    <%= image_tag(reservation.product.image, width: 100, height: 200) %>
-    <br>
-    <h2>Reservation Details</h2>
-    <h5>Status: <strong><%= reservation.status || 'Pending' %></strong></h5>
-    <br>
-    <%= link_to 'Accept', accept_product_reservation_path(reservation.product, reservation), data: {turbo_method: :post} %>
-    <br>
-    <%= link_to 'Reject', reject_product_reservation_path(reservation.product, reservation), data: {turbo_method: :post} %>
-    <br>
-<% end %>
 
-
-<h2>Your Creations</h2>
+<h3>Your Creations</h3>

@@ -39,6 +39,10 @@ p {
   font-size: 12px;
   font-family: "Poppins";
   padding: 0px 20px;
+
+  strong {
+    color: $yellow;
+  }
 }
 
 #product-paragraph {
