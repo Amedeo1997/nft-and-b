@@ -13,6 +13,13 @@ h1 {
   margin-bottom: 50px;
 }
 
+#user_title {
+  margin-top: 120px;
+  width: 750px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 h1 span {
   color: $yellow;
 }
@@ -63,4 +70,8 @@ p {
 #product-title {
   text-align: center;
   padding-bottom: 60px;
+}
+
+.title-center {
+  text-align: center;
 }
