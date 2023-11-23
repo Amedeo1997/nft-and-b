@@ -4,7 +4,6 @@ class ReservationsController < ApplicationController
   def new
     @reservation = Reservation.new
   end
-  # Add any necessary data to populate the form
 
   def create
     @product = Product.find(params[:product_id])
@@ -21,12 +20,20 @@ class ReservationsController < ApplicationController
   def show
     @reservation = Reservation.find(params[:id])
   end
-  # Add any additional logic needed for displaying a reservation
 
   def index
     @reservations = current_user.reservations
   end
-  # Add any additional logic needed for displaying a list of reservations
+
+  def accept
+    @reservation = Reservation.find(params[:id])
+    @reservation.accept
+  end
+
+  def reject
+    @reservation = Reservation.find(params[:id])
+    @reservation.reject
+  end
 
   private
 
@@ -35,7 +42,6 @@ class ReservationsController < ApplicationController
   end
 
   def reservation_params
-    # Define the parameters allowed for reservation creation
-    params.require(:reservation).permit(:start_date, :end_date)
+    params.require(:reservation).permit(:start_date, :end_date, :status)
   end
 end

@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def show_current_user_profile
     @user = current_user
+    @reservations = current_user.reservations
     render 'show'
   end
 end

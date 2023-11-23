@@ -1,19 +1,14 @@
-<h1>Hello, #{"username which will be added to schema"} and Welcome to Your Profile</h1>
-<%# think to add username and/or first/last %>
-<%# <p>Email: <%= @user.email %>
+<h1>Hello, #{"user.username"} and Welcome to Your Profile</h1>
 <h3>Your Reservations</h3>
 
-<% @user.reservations.each do |reservation| %>
-  <p>
+<% @reservations.each do |reservation| %>
     <%= image_tag(reservation.product.image, width: 100, height: 200) %>
     <%= "Reservation #{reservation.start_date} until #{reservation.end_date}" %>
-  </p>
+    <h2>Reservation Details</h2>
+    <p>Status: <%= reservation.status %></p>
+    <br>
+      <%= link_to'Accept', accept_product_reservation_path(reservation.product@reservation)%>
+    <br>
+      <%= link_to'Reject', reject_product_reservation_path(reservation.product@reservation)%>
+    <br>
 <% end %>
-
-<%# add the created methods in another list%>
-<%# <h3>My NFT's</h3>
-<% @user.products.each do |product| %>
-      <%# <%= image_tag(product.image, width: 100, height: 200) %>
-        <%# <h2><%= product.name</h2> %>
-        <%# <p><%= product.description</p> %>
-<%# <% end %>

@@ -8,8 +8,14 @@ Rails.application.routes.draw do
 
   get 'my_profile', to: 'users#show_current_user_profile'
   resources :users, only: [:new, :create, :show]
+
   resources :products do
-    resources :reservations, only: [:new, :create, :show, :index]
+    resources :reservations do
+      member do
+        post 'accept'
+        post 'reject'
+      end
+    end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
