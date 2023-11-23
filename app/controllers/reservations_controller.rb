@@ -17,22 +17,26 @@ class ReservationsController < ApplicationController
     end
   end
 
-  def show
-    @reservation = Reservation.find(params[:id])
-  end
-
   def index
     @reservations = current_user.reservations
   end
 
+  def show
+    @reservation = Reservation.find(params[:id])
+  end
+
   def accept
     @reservation = Reservation.find(params[:id])
-    @reservation.accept
+    if @reservation.accept
+      redirect_to my_profile_path(@user)
+    end
   end
 
   def reject
     @reservation = Reservation.find(params[:id])
-    @reservation.reject
+    if @reservation.reject
+      redirect_to my_profile_path(@user)
+    end
   end
 
   private

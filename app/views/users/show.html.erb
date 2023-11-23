@@ -2,13 +2,15 @@
 <h3>Your Reservations</h3>
 
 <% @reservations.each do |reservation| %>
-    <%= image_tag(reservation.product.image, width: 100, height: 200) %>
     <%= "Reservation #{reservation.start_date} until #{reservation.end_date}" %>
+    <br>
+    <%= image_tag(reservation.product.image, width: 100, height: 200) %>
+    <br>
     <h2>Reservation Details</h2>
-    <p>Status: <%= reservation.status %></p>
+    <h5>Status: <strong><%= reservation.status || 'Pending' %></strong></h5>
     <br>
-      <%= link_to'Accept', accept_product_reservation_path(reservation.product@reservation)%>
+    <%= link_to 'Accept', accept_product_reservation_path(reservation.product, reservation), data: {turbo_method: :post} %>
     <br>
-      <%= link_to'Reject', reject_product_reservation_path(reservation.product@reservation)%>
+    <%= link_to 'Reject', reject_product_reservation_path(reservation.product, reservation), data: {turbo_method: :post} %>
     <br>
 <% end %>
