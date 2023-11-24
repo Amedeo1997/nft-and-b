@@ -1,18 +1,25 @@
 .pagination {
-  margin-top: 15px;
   text-align: right;
-  padding-left: 500px;
+  justify-content: center;
+  margin-bottom: 80px;
 }
 
 .pagination a, .pagination span {
   padding: 5px 10px;
   margin: 0 2px;
-  border: 1px solid #ddd;
   text-decoration: none;
-  color: #333;
+  color: grey;
+  background-color: $grey-card;
+  border-radius: 2px;
+  font-family: "Poppins";
+  font-size: 14px;
 }
 
 .pagination .current {
+  padding: 5px 10px;
   background-color: $blue;
   color: #fff;
+  border-radius: 2px;
+  font-family: "Poppins";
+  font-size: 14px;
 }
