@@ -20,3 +20,20 @@
 .nav-link:hover {
   color: $blue;
 }
+
+.navbar-nav .dropdown-menu {
+  border-radius: 4px;
+  background-color: $grey-card;
+  border: 1px solid $blue;
+}
+
+a.dropdown-item {
+  font-family: "Poppins";
+  color: $blue;
+}
+
+a.dropdown-item:hover {
+  font-family: "Poppins";
+  color: white;
+  background-color: transparent;
+}
