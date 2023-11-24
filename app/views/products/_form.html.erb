@@ -1,11 +1,11 @@
 <div class="form-container">
   <h2 id="login-title" >Create your NFT</h2>
   <%= simple_form_for(@product) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :image %>
-  <%= f.input :category, collection: ['Art', 'Entertainment', 'Movie', 'Gaming', 'Collections'], prompt: 'Choose one category' %>
-    <%= f.input :price %>
-    <%= f.input :description %>
+    <%= f.input :name, input_html: { class: 'colored-text' }  %>
+    <%= f.input :image, input_html: { class: 'colored-text' }  %>
+  <%= f.input :category, collection: ['Art', 'Entertainment', 'Movie', 'Gaming', 'Collections'], prompt: 'Choose one category', input_html: { class: 'colored-text' }  %>
+    <%= f.input :price, input_html: { class: 'colored-text' }  %>
+    <%= f.input :description, input_html: { class: 'colored-text' }  %>
     <div class="form-actions">
       <%= f.button :submit, class: "button-primary" %>
     </div>
