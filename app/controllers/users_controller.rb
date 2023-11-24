@@ -11,7 +11,8 @@ class UsersController < ApplicationController
   def show_current_user_profile
     @user = current_user
     @reservations = current_user.reservations
-    @reservations_as_host = current_user.reservations_as_host
+    @your_products = Product.where(user: current_user)
+    @reservations_to_confirm = Reservation.where(product: @your_products)
     render 'show'
   end
 
