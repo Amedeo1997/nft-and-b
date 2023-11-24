@@ -40,7 +40,7 @@
     <div class="card">
       <%= image_tag(my_product.image) %>
       <h2><%= my_product.name %></h2>
-      <%= link_to 'Delete', product_path(my_product), method: :delete, class: 'button-category reject-btn' %>
+      <%= link_to 'Delete', product_path(my_product), data: {turbo_method: :delete}, class: 'button-category reject-btn' %>
     </div>
   <% end %>
 </div>
