@@ -50,7 +50,7 @@ Product.create!(
   price: 15.50,
   description: "Discreet Landscapes is a collection of digitally created artworks exploring the natural world through an imagined and utopic lens",
   availability: true,
-  image: "01.png",
+  image: "19.png",
   user_id: nicolas.id
 )
 
@@ -61,7 +61,7 @@ Product.create!(
   price: 35.50,
   description: "Each Genesis Immortal comes equipped with powerful traits, enhancing their abilities and making them valuable assets in the world of Skyborne Legacy.",
   availability: true,
-  image: "02.png",
+  image: "18.png",
   user_id: ahmed.id
 )
 
@@ -72,7 +72,7 @@ Product.create!(
   price: 65.50,
   description: "In the weightless environment of space, a unique form of sculpture art emerges, using paint as a medium to create sculptures",
   availability: true,
-  image: "03.png",
+  image: "17.png",
   user_id: alexandra.id
 )
 
@@ -83,7 +83,7 @@ Product.create!(
   price: 65.50,
   description: "Something which has more than one possible meaning and therefore possibly causes confusion",
   availability: true,
-  image: "04.png",
+  image: "16.png",
   user_id: alexandra.id
 )
 
@@ -94,7 +94,7 @@ Product.create!(
   price: 15.50,
   description: "Discreet Landscapes is a collection of digitally created artworks exploring the natural world through an imagined and utopic lens",
   availability: true,
-  image: "05.png",
+  image: "15.png",
   user_id: nicolas.id
 )
 
@@ -105,7 +105,7 @@ Product.create!(
   price: 35.50,
   description: "Each Genesis Immortal comes equipped with powerful traits, enhancing their abilities and making them valuable assets in the world of Skyborne Legacy.",
   availability: true,
-  image: "06.png",
+  image: "14.png",
   user_id: ahmed.id
 )
 
@@ -116,7 +116,7 @@ Product.create!(
   price: 65.50,
   description: "In the weightless environment of space, a unique form of sculpture art emerges, using paint as a medium to create sculptures",
   availability: true,
-  image: "07.png",
+  image: "13.png",
   user_id: alexandra.id
 )
 
@@ -127,7 +127,7 @@ Product.create!(
   price: 65.50,
   description: "Something which has more than one possible meaning and therefore possibly causes confusion",
   availability: true,
-  image: "08.png",
+  image: "12.png",
   user_id: alexandra.id
 )
 
@@ -137,7 +137,7 @@ Product.create!(
   price: 35.50,
   description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   availability: true,
-  image: "09.png",
+  image: "11.png",
   user_id: alexandra.id
 )
 
@@ -153,10 +153,140 @@ Product.create!(
 
 Product.create!(
   name: "lorem ipsum",
+  category: "Collections",
+  price: 35.50,
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  availability: true,
+  image: "09.png",
+  user_id: nicolas.id
+)
+
+Product.create!(
+  name: "lorem ipsum",
+  category: "Collections",
+  price: 35.50,
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  availability: true,
+  image: "08.png",
+  user_id: ahmed.id
+)
+
+Product.create!(
+  name: "lorem ipsum",
+  category: "Gaming",
+  price: 35.50,
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  availability: true,
+  image: "07.png",
+  user_id: nicolas.id
+)
+
+Product.create!(
+  name: "lorem ipsum",
+  category: "Gaming",
+  price: 35.50,
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  availability: true,
+  image: "06.png",
+  user_id: alexandra.id
+)
+
+Product.create!(
+  name: "lorem ipsum",
+  category: "Gaming",
+  price: 35.50,
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  availability: true,
+  image: "20.png",
+  user_id: ahmed.id
+)
+
+Product.create!(
+  name: "lorem ipsum",
+  category: "Art",
+  price: 35.50,
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  availability: true,
+  image: "04.png",
+  user_id: ahmed.id
+)
+
+Product.create!(
+  name: "lorem ipsum",
   category: "Entertainment",
   price: 35.50,
   description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   availability: true,
-  image: "11.png",
+  image: "03.png",
   user_id: nicolas.id
+)
+
+Product.create!(
+  name: "lorem ipsum",
+  category: "Art",
+  price: 35.50,
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  availability: true,
+  image: "02.png",
+  user_id: alexandra.id
+)
+
+Product.create!(
+  name: "lorem ipsum",
+  category: "Collections",
+  price: 35.50,
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  availability: true,
+  image: "01.png",
+  user_id: ahmed.id
+)
+
+Product.create!(
+  name: "lorem ipsum",
+  category: "Movie",
+  price: 35.50,
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  availability: true,
+  image: "21.png",
+  user_id: ahmed.id
+)
+
+Product.create!(
+  name: "lorem ipsum",
+  category: "Movie",
+  price: 35.50,
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  availability: true,
+  image: "22.png",
+  user_id: ahmed.id
+)
+
+Product.create!(
+  name: "lorem ipsum",
+  category: "Entertainment",
+  price: 35.50,
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  availability: true,
+  image: "23.png",
+  user_id: ahmed.id
+)
+
+Product.create!(
+  name: "lorem ipsum",
+  category: "Entertainment",
+  price: 35.50,
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  availability: true,
+  image: "24.png",
+  user_id: ahmed.id
+)
+
+Product.create!(
+  name: "KoAL Pacino",
+  category: "Gaming",
+  price: 35.50,
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  availability: true,
+  image: "25.png",
+  user_id: ahmed.id
 )
