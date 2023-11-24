@@ -4,8 +4,8 @@
   <h4 id="price"><%= "#{@product.price}" %> €/day</h4>
   <h4 data-date-reservation-target="total"></h4>
   <%= simple_form_for [@product, @reservation] do |f| %>
-  <%= f.input :start_date, html5: true, input_html: { data: { date_reservation_target: "start", action:"input->date-reservation#calculate" } } %>
-  <%= f.input :end_date, html5: true, input_html: { data: { date_reservation_target: "end", action:"input->date-reservation#calculate" } } %>
+  <%= f.input :start_date, html5: true, input_html: { data: { date_reservation_target: "start", action:"input->date-reservation#calculate", class: "colored-text" } } %>
+  <%= f.input :end_date, html5: true, input_html: { data: { date_reservation_target: "end", action:"input->date-reservation#calculate", class: "colored-text" } } %>
     <div class="form-actions">
       <%= f.button :submit, class: "button-primary" %>
     </div>
