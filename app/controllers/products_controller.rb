@@ -3,14 +3,12 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
   def index
-    @categories = Product.pluck(:category).uniq
-    @selected_category = params[:category]
-    @products = filtered_products.paginate(page: params[:page], per_page: 8)
+    @products = Product.all
   end
 
   def your_products
     @products = Product.find(params[:id])
-    @your_products = Product.find(params[:user_id])
+
   end
 
   def show
@@ -41,13 +39,5 @@ class ProductsController < ApplicationController
 
   def product_params
     params.require(:product).permit(:name, :image, :category, :price, :description)
-  end
-end
-
-def filtered_products
-  if @selected_category.present? && @selected_category != 'all'
-    Product.where(category: @selected_category)
-  else
-    Product.all
   end
 end
