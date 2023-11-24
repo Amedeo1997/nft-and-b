@@ -78,3 +78,10 @@ p {
 .title-center {
   text-align: center;
 }
+
+.short-description {
+  max-width: 500ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

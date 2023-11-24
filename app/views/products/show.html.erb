@@ -20,16 +20,17 @@
 <h3>Need more?</h3>
 </div>
 
-  <div class="card-container">
-
-<% @suggestion[0..3].each do |product| %>
-    <div class="card">
-      <div class="tag">
-        <p><span><%= product.price %>€</span>/day</p>
-      </div>
-      <%= image_tag(product.image) %>
-      <h2><%= product.name %></h2>
-      <p><%= product.description %></p>
-    </div>
-<% end %>
-  </div>
+<div class="card-container">
+  <% @suggestion[0..3].each do |product| %>
+      <%= link_to product_path(product), class: "override" do %>
+        <div class="card">
+          <div class="tag">
+            <p><span><%= product.price %>€</span>/day</p>
+          </div>
+          <%= image_tag(product.image) %>
+          <h2><%= product.name %></h2>
+          <p><%= product.description %></p>
+        </div>
+      <% end %>
+  <% end %>
+</div>
