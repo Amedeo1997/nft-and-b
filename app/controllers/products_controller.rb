@@ -6,6 +6,11 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def your_products
+    @products = Product.find(params[:id])
+    @your_products = Product.find(params[:user_id])
+  end
+
   def show
     @products = Product.find(params[:id])
     @suggestion = Product.all
