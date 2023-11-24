@@ -4,7 +4,6 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    # @reservation = Reservation.find(params[:id])
     @categories = Product.pluck(:category).uniq
     @selected_category = params[:category]
     @products = filtered_products.paginate(page: params[:page], per_page: 8)
@@ -36,15 +35,12 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    @product = current_user.products.find(params[:id])
+    @product = Product.find(params[:id])
     @product.destroy
     redirect_to products_path, notice: 'Product was successfully deleted.'
   end
 
   private
-
-
-
 
   def set_product
     @product = Product.find(params[:id])
