@@ -46,7 +46,7 @@ nicolas = User.create!(
 # product1
 Product.create!(
   name: "Discreet Landscapes",
-  category: "Music",
+  category: "Movie",
   price: 15.50,
   description: "Discreet Landscapes is a collection of digitally created artworks exploring the natural world through an imagined and utopic lens",
   availability: true,
@@ -57,7 +57,7 @@ Product.create!(
 # product2
 Product.create!(
   name: "Skyborne - Genesis",
-  category: "Photography",
+  category: "Entertainment",
   price: 35.50,
   description: "Each Genesis Immortal comes equipped with powerful traits, enhancing their abilities and making them valuable assets in the world of Skyborne Legacy.",
   availability: true,
@@ -90,7 +90,7 @@ Product.create!(
 # product()
 Product.create!(
   name: "Discreet Landscapes",
-  category: "Music",
+  category: "Movie",
   price: 15.50,
   description: "Discreet Landscapes is a collection of digitally created artworks exploring the natural world through an imagined and utopic lens",
   availability: true,
@@ -101,7 +101,7 @@ Product.create!(
 # product6
 Product.create!(
   name: "Skyborne - Genesis",
-  category: "Photography",
+  category: "Entertainment",
   price: 35.50,
   description: "Each Genesis Immortal comes equipped with powerful traits, enhancing their abilities and making them valuable assets in the world of Skyborne Legacy.",
   availability: true,
@@ -129,4 +129,34 @@ Product.create!(
   availability: true,
   image: "08.png",
   user_id: alexandra.id
+)
+
+Product.create!(
+  name: "lorem ipsum",
+  category: "Art",
+  price: 35.50,
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  availability: true,
+  image: "09.png",
+  user_id: alexandra.id
+)
+
+Product.create!(
+  name: "lorem ipsum",
+  category: "Collections",
+  price: 35.50,
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  availability: true,
+  image: "10.png",
+  user_id: nicolas.id
+)
+
+Product.create!(
+  name: "lorem ipsum",
+  category: "Entertainment",
+  price: 35.50,
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  availability: true,
+  image: "11.png",
+  user_id: nicolas.id
 )
