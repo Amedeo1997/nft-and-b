@@ -1,8 +1,11 @@
-<div class="form-container">
-  <h2 id="login-title" >Book your NFT now</h2>
+<div class="form-container", data-controller= "date-reservation" data-date-reservation-price-value="<%= @product.price %>">
+  <h2 id="login-title" >Book <%= "#{@product.name}" %> now</h2>
+  <%= image_tag(@product.image, class: "img-resize", alt: "product image") %>
+  <h4 id="price"><%= "#{@product.price}" %> €/day</h4>
+  <h4 data-date-reservation-target="total"></h4>
   <%= simple_form_for [@product, @reservation] do |f| %>
-  <%= f.input :start_date, html5: true %>
-  <%= f.input :end_date, html5: true %>
+  <%= f.input :start_date, html5: true, input_html: { data: { date_reservation_target: "start", action:"input->date-reservation#calculate" } } %>
+  <%= f.input :end_date, html5: true, input_html: { data: { date_reservation_target: "end", action:"input->date-reservation#calculate" } } %>
     <div class="form-actions">
       <%= f.button :submit, class: "button-primary" %>
     </div>
