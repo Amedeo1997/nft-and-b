@@ -1,7 +1,8 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="category"
 export default class extends Controller {
-  connect() {
+  hideButton(event) {
+    event.preventDefault();
+    this.element.classList.add("hidden");
   }
 }
