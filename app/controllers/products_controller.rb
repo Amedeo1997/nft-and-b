@@ -4,6 +4,10 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    # @reservation = Reservation.find(params[:id])
+    @categories = Product.pluck(:category).uniq
+    @selected_category = params[:category]
+    @products = filtered_products.paginate(page: params[:page], per_page: 8)
   end
 
   def your_products
@@ -39,11 +43,23 @@ class ProductsController < ApplicationController
 
   private
 
+
+
+
   def set_product
     @product = Product.find(params[:id])
   end
 
   def product_params
     params.require(:product).permit(:name, :image, :category, :price, :description)
+  end
+
+  def filtered_products
+    if @selected_category.present? && @selected_category != 'all'
+      Product.where(category: @selected_category)
+    else
+      Product.all
+
+    end
   end
 end
