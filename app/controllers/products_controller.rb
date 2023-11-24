@@ -8,6 +8,11 @@ class ProductsController < ApplicationController
     @products = filtered_products.paginate(page: params[:page], per_page: 8)
   end
 
+  def your_products
+    @products = Product.find(params[:id])
+    @your_products = Product.find(params[:user_id])
+  end
+
   def show
     @products = Product.find(params[:id])
     @suggestion = Product.all
