@@ -1,5 +1,5 @@
-<h1>Hello, and Welcome to Your Profile</h1>
-<h3>Your Reservations</h3>
+<h1 id="user_title">Hello, <%= @user.username.capitalize %></h1>
+<h3 class="title-center">Your reservations :</h3>
 
 <% @reservations.each do |reservation| %>
   <%= "Reservation #{reservation.start_date} until #{reservation.end_date}" %>
@@ -22,3 +22,22 @@
   <%= link_to 'Reject', reject_product_reservation_path(host.product, host), data: {turbo_method: :post} %>
   <br>
 <% end %>
+<div class="card-container-home">
+  <% @reservations.each do |reservation| %>
+    <div class="card">
+      <div class="tag">
+        <p><%= "#{reservation.start_date} to #{reservation.end_date}" %></p>
+      </div>
+      <%= image_tag(reservation.product.image) %>
+      <h2><%= reservation.product.name %></h2>
+      <p>Status: <strong><%= reservation.status || 'Pending' %></strong></p>
+      <div class="btn-status-container">
+        <%= link_to 'Accept', accept_product_reservation_path(reservation.product, reservation), data: {turbo_method: :post}, class: "button-category accept-btn" %>
+        <div id="empty-space"></div>
+        <%= link_to 'Reject', reject_product_reservation_path(reservation.product, reservation), data: {turbo_method: :post}, class: "button-category reject-btn" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="empty"></div>

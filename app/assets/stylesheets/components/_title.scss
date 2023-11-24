@@ -13,6 +13,13 @@ h1 {
   margin-bottom: 50px;
 }
 
+#user_title {
+  margin-top: 120px;
+  width: 750px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 h1 span {
   color: $yellow;
 }
@@ -39,6 +46,10 @@ p {
   font-size: 12px;
   font-family: "Poppins";
   padding: 0px 20px;
+
+  strong {
+    color: $yellow;
+  }
 }
 
 #product-paragraph {
@@ -57,5 +68,10 @@ p {
 }
 
 #product-title {
-  text-align: left;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.title-center {
+  text-align: center;
 }

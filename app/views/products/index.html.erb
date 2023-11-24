@@ -1,25 +1,30 @@
 <div class="category-container">
-    <a href="" id="all" class= "button-category">All</a>
-    <a href="" class= "button-category">Art</a>
-    <a href="" class= "button-category">Entertainment</a>
-    <a href="" class= "button-category">Movie</a>
-    <a href="" class= "button-category">Gaming</a>
-    <a href="" class= "button-category">Collections</a>
+  <%= link_to "All", products_path, class: "button-category", data: { category: 'all' } %>
+  <%= link_to "Art", products_path(category: 'Art'), class: "button-category" %>
+  <%= link_to "Entertainment", products_path(category: 'Entertainment'), class: "button-category" %>
+  <%= link_to "Movie", products_path(category: 'Movie'), class: "button-category" %>
+  <%= link_to "Gaming", products_path(category: 'Gaming'), class: "button-category" %>
+  <%= link_to "Collections", products_path(category: 'Collections'), class: "button-category" %>
 </div>
 
 <div class="card-container">
   <% @products.each do |product| %>
     <%= link_to product_path(product), class: "override" do %>
-      <div class="card">
+      <div class="card" data-category="<%= product.category %>">
         <div class="tag">
           <p><span><%= product.price %>€</span>/day</p>
         </div>
         <div>
-        <%= image_tag(product.image) %>
-        <h2><%= product.name %></h2>
-        <p><%= product.description %></p>
+          <%= image_tag(product.image) %>
+          <h2><%= product.name %></h2>
+          <p><%= product.description %></p>
         </div>
       </div>
     <% end %>
   <% end %>
+</div>
+
+<!-- Added Pagination, css TODO (see _pagination.scss) -->
+<div class="pagination">
+  <%= will_paginate @products %>
 </div>
